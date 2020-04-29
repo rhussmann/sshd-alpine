@@ -1,7 +1,7 @@
 FROM sickp/alpine-sshd:7.5
 
 ADD sshd_config /etc/ssh/sshd_config
-ADD https://github.com/rhussmann.keys /home/rhussmann/.ssh/authorized_keys
+ADD beagleBone.key /home/rhussmann/.ssh/authorized_keys
 RUN \
   passwd -d root && \
   adduser -D -s /bin/ash rhussmann && \
